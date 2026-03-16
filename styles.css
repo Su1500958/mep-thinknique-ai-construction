@@ -1,0 +1,92 @@
+/* COLOR PALETTE */
+:root{
+--lavender-grey:#8895b3;
+--soft-periwinkle:#8e94f2;
+--wisteria-blue:#9fa0ff;
+--mauve:#bbadff;
+--mauve-2:#dab6fc;
+}
+
+/* GENERAL */
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:var(--lavender-grey);
+color:white;
+}
+
+/* NAVIGATION */
+nav{
+background:var(--soft-periwinkle);
+padding:15px;
+display:flex;
+justify-content:center;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(135deg,var(--soft-periwinkle),var(--mauve));
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
+}
+
+/* SECTIONS */
+section{
+padding:60px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+margin-bottom:30px;
+}
+
+/* PROJECT CARDS */
+.card-container{
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+justify-content:center;
+}
+
+.card{
+background:var(--wisteria-blue);
+padding:25px;
+border-radius:10px;
+width:280px;
+}
+
+/* WEEKLY ARTICLES */
+.article{
+background:var(--mauve);
+padding:20px;
+margin-bottom:15px;
+border-radius:8px;
+}
+
+/* FOOTER */
+footer{
+background:var(--mauve-2);
+color:black;
+text-align:center;
+padding:20px;
+}
