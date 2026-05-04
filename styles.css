@@ -9,6 +9,11 @@
 h2 {
     text-shadow: 0 0 10px rgba(99,179,237,0.3);
 }
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
 
 /* GENERAL */
 body{
@@ -81,6 +86,14 @@ section::after {
     margin: 30px auto 0;
     border-radius: 2px;
 }
+section:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+section {
+    padding: 80px 20px;
+}
 
 h2{
 text-align:center;
@@ -88,11 +101,12 @@ margin-bottom:30px;
 }
 
 /* PROJECT CARDS */
-.card-container{
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-justify-content:center;
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .card {
@@ -104,6 +118,10 @@ justify-content:center;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+.card p {
+    line-height: 1.6;
+    opacity: 0.85;
 }
 
 /* glowing effect */
@@ -122,6 +140,9 @@ justify-content:center;
 .card:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+.card:hover {
+    transform: translateY(-8px) scale(1.03);
 }
 .card {
     animation: fadeUp 0.6s ease forwards;
