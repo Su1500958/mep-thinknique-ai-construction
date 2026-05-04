@@ -6,6 +6,9 @@
 --mauve:#bbadff;
 --mauve-2:#dab6fc;
 }
+h2 {
+    text-shadow: 0 0 10px rgba(99,179,237,0.3);
+}
 
 /* GENERAL */
 body{
@@ -13,6 +16,21 @@ margin:0;
 font-family:Arial, sans-serif;
 background:var(--lavender-grey);
 color:white;
+}
+
+.btn {
+    background: linear-gradient(135deg, #3182CE, #63B3ED);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(99,179,237,0.4);
 }
 
 /* NAVIGATION */
@@ -31,28 +49,37 @@ font-weight:bold;
 }
 
 /* HERO */
-.hero{
-text-align:center;
-padding:100px 20px;
-background:linear-gradient(135deg,var(--soft-periwinkle),var(--mauve));
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at top, #2B6CB0, #1A202C);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.hero h1{
-font-size:45px;
-margin-bottom:15px;
+.hero h1 {
+    font-size: 52px;
+    letter-spacing: 1px;
 }
 
-.hero p{
-max-width:700px;
-margin:auto;
-font-size:18px;
+.hero p {
+    font-size: 18px;
+    opacity: 0.85;
 }
 
 /* SECTIONS */
-section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
+section {
+    padding: 70px 20px;
+    position: relative;
+}
+
+section::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: var(--soft-periwinkle);
+    display: block;
+    margin: 30px auto 0;
+    border-radius: 2px;
 }
 
 h2{
@@ -68,13 +95,48 @@ gap:20px;
 justify-content:center;
 }
 
-.card{
-background:var(--wisteria-blue);
-padding:25px;
-border-radius:10px;
-width:280px;
+.card {
+    background: linear-gradient(145deg, #2D3748, #1A202C);
+    padding: 25px;
+    border-radius: 14px;
+    width: 300px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+/* glowing effect */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px;
+    padding: 1px;
+    background: linear-gradient(120deg, #63B3ED, transparent);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+}
+
+.card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+.card {
+    animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 /* WEEKLY ARTICLES */
 .article{
 background:var(--mauve);
