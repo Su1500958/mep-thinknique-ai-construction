@@ -110,6 +110,12 @@ margin-bottom:30px;
 }
 
 .card {
+    .card{
+    transform-style: preserve-3d;
+    transition: 0.3s ease;
+}
+
+.card{
     background: linear-gradient(145deg, #2D3748, #1A202C);
     padding: 25px;
     border-radius: 14px;
@@ -118,6 +124,9 @@ margin-bottom:30px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
 }
 .card p {
     line-height: 1.6;
