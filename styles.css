@@ -146,13 +146,16 @@ margin-bottom:30px;
             mask-composite: exclude;
 }
 
-.card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+.card:hover{
+    transform:
+        perspective(1000px)
+        rotateX(5deg)
+        rotateY(-5deg)
+        translateY(-10px);
+
+    box-shadow: 0 18px 35px rgba(0,0,0,0.4);
 }
-.card:hover {
-    transform: translateY(-8px) scale(1.03);
-}
+
 .card {
     animation: fadeUp 0.6s ease forwards;
 }
